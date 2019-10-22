@@ -1,0 +1,10 @@
+.btn {
+  background-color: lighten($c-blue-dark, 30%);
+  padding: 5px 10px;
+  color: $c-blue-dark;
+  transition: $trans;
+
+  &:hover {
+    background-color: lighten($c-blue-dark, 40%);
+  }
+}

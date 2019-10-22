@@ -1,0 +1,22 @@
+.user {
+  display: flex;
+  align-items: center;
+
+  &__img {
+    height: 40px;
+    width: 40px;
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: 15px;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__status {
+    color: rgba(white, 0.3);
+  }
+}

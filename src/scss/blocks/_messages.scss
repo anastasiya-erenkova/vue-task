@@ -1,0 +1,95 @@
+.messages {
+  background-color: $c-blue;
+  position: relative;
+  padding: 120px 25px 140px;
+  flex-grow: 1;
+
+  &__head {
+    background-color: $c-white;
+    position: fixed;
+    top: 0;
+    left: 270px;
+    right: 0;
+    padding: 5px 25px 15px;
+  }
+
+  &__body {
+    max-height: calc(100vh - 260px);
+    overflow-y: scroll;
+
+    @media (hover: hover) {
+      &::-webkit-scrollbar {
+        width: 10px;
+        height: 7px;
+        cursor: pointer;
+        z-index: 0;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 15px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #999;
+        border-radius: 15px;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: darken(#999, 10%);
+      }
+    }
+  }
+
+  &__new {
+    bottom: 25px;
+    left: 295px;
+    right: 25px;
+    position: fixed;
+    display: flex;
+
+    align-items: center;
+  }
+
+  &__select {
+    border: none;
+    max-width: 115px;
+    outline: none;
+  }
+}
+
+.message {
+  background-color: $c-white;
+  border-radius: 5px;
+  padding: 15px;
+
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  + .message {
+    margin-top: 20px;
+  }
+
+  &__date {
+    color: rgba($c-black, 0.5);
+    margin-top: 20px;
+  }
+
+  &__textarea {
+    flex-grow: 1;
+    resize: none;
+    height: 100px;
+    border-radius: 5px;
+
+    &:focus {
+      border-color: lighten($c-blue-dark, 40%);
+    }
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    margin-left: 15px;
+  }
+}
